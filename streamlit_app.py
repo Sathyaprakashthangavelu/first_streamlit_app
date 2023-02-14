@@ -21,10 +21,21 @@ import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" +'kiwi')
 
 fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
+streamlit.dataframe(fruityvice_normalized)
 
-#streamlit.dataframe(fruityvice_normalized)
-#fruit_choice = streamlit.text_input('What fruit would you like information about?',fruit_choice)
-#streamlit.write('The user entered ', fruit_choice)
+fruit_choice = streamlit.text_input('What fruit would you like information about?',fruit_choice)
+streamlit.write('The user entered ', fruit_choice)
+import request
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + add_my_fruit)
+
+
+
+
+add_my_fruit = streamlit.text_input('What fruit would you like to add?','kiwi')
+streamlit.write('The user entered ', add_my_fruit)
+
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + add_my_fruit)
 
 import snowflake.connector
 
