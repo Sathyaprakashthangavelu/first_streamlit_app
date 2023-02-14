@@ -22,9 +22,9 @@ fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" +'kiwi')
 
 fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
 
-streamlit.dataframe(fruityvice_normalized)
-fruit_choice = streamlit.text_input('What fruit would you like information about?',fruit_choice)
-streamlit.write('The user entered ', fruit_choice)
+#streamlit.dataframe(fruityvice_normalized)
+#fruit_choice = streamlit.text_input('What fruit would you like information about?',fruit_choice)
+#streamlit.write('The user entered ', fruit_choice)
 
 import snowflake.connector
 
