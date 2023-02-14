@@ -44,7 +44,6 @@ streamlit.write('Thanks for adding ', add_my_fruit)
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + add_my_fruit)
 
 streamlit.stop()
-
 #import snowflake.connector
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
