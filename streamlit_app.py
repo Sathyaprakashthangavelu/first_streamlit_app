@@ -45,7 +45,8 @@ except URLError as e:
 add_my_fruit =streamlit.text_input('What fruit would you like to add?','Kiwi')
 streamlit.write('The user entered ', add_my_fruit)
 # import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + add_my_fruit) streamlit.header("The fruit load list contains:")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + add_my_fruit) 
+streamlit.header("The fruit load list contains:")
 def get_fruit_load_list():
     with my_cnx.cursor() as my_cur:
         my_cur.execute("SELECT * FROM FRUIT_LOAD_LIST")
