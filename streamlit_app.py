@@ -80,5 +80,4 @@ streamlit.stop()
 # streamlit.header("The fruit load list contains:")
 # streamlit.dataframe(my_data_rows)
 
-
 # my_cur.execute("insert into fruit_load_list values('from streamlit')")
